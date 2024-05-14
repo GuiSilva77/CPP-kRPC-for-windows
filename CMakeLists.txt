@@ -91,9 +91,10 @@ if(WIN32 OR CYGWIN)
   target_link_libraries(krpc ws2_32 mswsock)
 endif()
 
+set(APPDATA_PATH "$ENV{APPDATA}/kRPC")
 install(TARGETS krpc
-        LIBRARY DESTINATION lib
-        ARCHIVE DESTINATION lib)
+        LIBRARY DESTINATION ${APPDATA_PATH}/lib
+        ARCHIVE DESTINATION ${APPDATA_PATH}/lib)
 
-install(DIRECTORY include DESTINATION . FILES_MATCHING PATTERN "*.hpp")
-install(FILES ${PROTO_HDR} DESTINATION include/krpc)
+install(DIRECTORY include DESTINATION ${APPDATA_PATH}/include FILES_MATCHING PATTERN "*.hpp")
+install(FILES ${PROTO_HDR} DESTINATION ${APPDATA_PATH}/include/krpc)
