@@ -1,0 +1,8 @@
+{
+  "builtin-baseline": "a1212c93cabaa9c5c36c1ffdb4bddd59fdf31e43",
+  "dependencies": [
+    "asio",
+    {"name": "protobuf", "version>=": "3.21.12", "features": ["zlib"]},
+    "zlib"
+  ]
+}

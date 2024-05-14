@@ -1,0 +1,14 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "vcpkg.cmake",
+        "CMAKE_MAKE_PROGRAM": "ninja"
+      }
+    }
+  ]
+}
