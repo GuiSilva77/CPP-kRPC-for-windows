@@ -10,7 +10,7 @@ This is a simple script to install the C++ kRPC client on windows. It downloads 
 
 ## Usage
 
-1. Mmake sure you have git, cmake and a C++ compiler installed and in your PATH
+1. Make sure you have git, cmake and a C++ compiler installed and in your PATH
 2. Clone or download this repository, it has the scripts and the modified CMakeLists.txt to use vcpkg's toolchain file
 3. Run powershell and navigate to the folder where you downloaded the repository
 4. Run the script `.\configure.ps1`, this will download the latest release of the kRPC client and configure the environment for building the project
