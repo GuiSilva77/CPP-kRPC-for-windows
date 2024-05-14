@@ -59,12 +59,14 @@ if (-not (Test-Path "$workingDir\build\krpc.lib")) {
 
 ninja.exe install
 
-if (-not (Test-Path "C:\Program Files (x86)\kRPC\lib\krpc.lib")) {
+$appdata = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::ApplicationData)
+if (-not (Test-Path "$appdata\kRPC\lib\krpc.lib")) {
   Write-Warning "Failed to install the library!`nPlease check the error messages above and try again."
+  Set-Location $PSScriptRoot
   Exit
 }
 
 #copy build\protobuf\krpc.pb.cpp to C:\Program Files\krpc\krpc.pb.cpp
-Copy-Item "$workingDir\build\protobuf\src\krpc.pb.cpp" -Destination "C:\Program Files (x86)\kRPC" -Force
+Copy-Item "$workingDir\build\protobuf\src\krpc.pb.cpp" -Destination "$appdata\kRPC" -Force
 
 Write-Host "krpc-cpp-0.5.2 has been successfully built and installed!"

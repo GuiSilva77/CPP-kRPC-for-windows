@@ -16,6 +16,7 @@ This is a simple script to install the C++ kRPC client on windows. It downloads 
 4. run the script `.\configure.ps1`, this will download the latest release of the kRPC client and configure the environment for building the project
 5. run the script `.\build.ps1`, this will build the project using cmake and ninja, and install the library in the %appdata%\kRPC folder
 6. you can now use the library in your projects by including the headers and linking the library with your project
+7. you can now delete the repository folder, the kRPC client is installed in the %appdata%\kRPC folder
 
 # Important
 
