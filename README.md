@@ -32,12 +32,13 @@ You can use the vcpkg file in this repository to manage the dependencies of your
 
 0. Make sure you have the vcpkg installed and integrated with Visual Studio, and add the vcpkg file to your project root
 1. Open the project properties
-2. Go to `vcpkg` settings and set YES to `Use Vcpkg` and `Use Vcpkg Manifest`
-3. Go to `C/C++ -> Code Generation` and set `Runtime Library` to `Multi-threaded (/MT)`
-4. Go to `Linker -> Input` and add `%APPDATA%\kRPC\lib\krpc.lib` to the `Additional Dependencies`
-5. Run `vcpkg install` to install the dependencies on the root of your project
-6. Run `vcpkg integrate install` to integrate the dependencies with your project
-7. Add the `%APPDATA%\kRPC\krpc.pb.cpp` to your project as a source file
+2. Go to `VC++ Directories` and add `%APPDATA%\kRPC\include` in `Include Directories`
+3. Go to `vcpkg` settings and set YES to `Use Vcpkg` and `Use Vcpkg Manifest`
+4. Go to `C/C++ -> Code Generation` and set `Runtime Library` to `Multi-threaded (/MT)`
+5. Go to `Linker -> Input` and add `%APPDATA%\kRPC\lib\krpc.lib` to the `Additional Dependencies`
+6. Run `vcpkg install` to install the dependencies on the root of your project
+7. Run `vcpkg integrate install` to integrate the dependencies with your project
+8. Add the `%APPDATA%\kRPC\krpc.pb.cpp` to your project as a source file
 
 ### If you use CMake:
 
