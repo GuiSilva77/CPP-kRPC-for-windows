@@ -8,6 +8,7 @@ This is a simple script to install the C++ kRPC client on windows. It downloads 
 - CMake
 - Visual Studio with C++ and Cross Platform Development tools
 - Windows SDK
+- PowerShell 7
 
 ## Usage
 
